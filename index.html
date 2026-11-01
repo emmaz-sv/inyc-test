@@ -1,0 +1,1094 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>International NeuroHealth Youth Council - INYC</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Lora:ital,wght@0,400;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Tailwind CSS CDN with typography plugin -->
+  <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              orange: '#f29900',
+              maroon: '#8a1515',
+              blue: '#1a73e8',
+              navy: '#0f172a'
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'ui-sans-serif', 'system-ui', '-apple-system', 'sans-serif'],
+            serif: ['Lora', 'ui-serif', 'Georgia', 'serif'],
+            cursive: ['Caveat', 'cursive'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="stylesheet" href="/inyc/styles.css">
+  <meta name="description" content="International NeuroHealth Youth Council: youth-led neurohealth literacy and bilingual early-support resources for families in the US and China">
+
+  <style>
+    .gold-brown-blur {
+      background: linear-gradient(135deg, #130f0d 0%, #20130d 50%, #0c0908 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .gold-brown-blur::before {
+      content: '';
+      position: absolute;
+      top: -20%;
+      left: -20%;
+      width: 140%;
+      height: 140%;
+      background: radial-gradient(circle, rgba(242, 153, 0, 0.08) 0%, rgba(242, 153, 0, 0) 55%),
+        radial-gradient(circle, rgba(138, 21, 21, 0.08) 0%, rgba(138, 21, 21, 0) 50%);
+      filter: blur(80px);
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .font-cursive {
+      font-family: Caveat, cursive;
+    }
+  </style>
+</head>
+
+<body class="bg-slate-50 text-slate-900 font-sans antialiased flex flex-col min-h-screen">
+  
+  <a href="#main-content"
+    class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:rounded-md focus:bg-white focus:px-4 focus:py-2 focus:text-slate-900 focus:shadow-md transition">Skip
+    to content</a>
+
+  <!-- Fixed Navbar Container -->
+  <div id="navbar-container"
+    class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-slate-950/95 shadow-lg backdrop-blur-md">
+    <!-- Top Alert Banner -->
+    <div id="alert-banner"
+      class="bg-brand-orange text-slate-950 text-xs font-semibold py-2 px-4 text-center transition-all duration-300 flex items-center justify-center gap-2">
+      
+      <span>Youth-led neurohealth literacy and bilingual early support for families.</span>
+      <a href="/inyc/index.html#programs"
+        class="underline hover:text-slate-900 transition ml-2">See our work &rarr;</a>
+      
+    </div>
+
+    <!-- Navigation Header -->
+    <header id="main-header"
+      class="mx-auto flex max-w-7xl items-center justify-between px-4 py-6 md:px-8 transition-all duration-300">
+      <div class="flex items-center gap-3">
+        <a href="/inyc/" class="flex flex-col no-underline group">
+          <span
+            class="text-xl font-extrabold tracking-tight text-white group-hover:text-brand-orange transition-colors">INYC</span>
+          <span
+            class="text-[9px] uppercase tracking-widest text-slate-300 font-medium group-hover:text-white transition-colors">International
+            NeuroHealth Youth Council</span>
+        </a>
+      </div>
+
+      <nav class="hidden lg:block">
+        <ul class="flex items-center gap-6 text-sm font-semibold">
+          
+          <li><a href="/inyc/index.html#home"
+              class="text-slate-200 hover:text-white transition-colors">Home</a></li>
+          <li><a href="/inyc/screening.html"
+              class="text-slate-200 hover:text-white transition-colors">Autism Screener</a></li>
+          <li><a href="/inyc/index.html#resources"
+              class="text-slate-200 hover:text-white transition-colors">Resources</a></li>
+          <li><a href="/inyc/index.html#pamphlets"
+              class="text-slate-200 hover:text-white transition-colors">Pamphlets</a></li>
+          <li><a href="/inyc/index.html#contact"
+              class="text-slate-200 hover:text-white transition-colors">Contact & Presentations</a></li>
+          <li><a href="/inyc/zh/index.html#home"
+              class="lang-switch-btn ml-4 rounded-full border border-brand-orange bg-brand-orange/10 px-4 py-1.5 text-brand-orange font-medium tracking-wide transition hover:bg-brand-orange hover:text-slate-950">中文</a>
+          </li>
+          
+        </ul>
+      </nav>
+
+      <!-- Mobile Menu Button -->
+      <div class="lg:hidden flex items-center gap-4">
+        
+        <a href="/inyc/zh/index.html#home"
+          class="lang-switch-btn text-xs rounded-full border border-brand-orange bg-brand-orange/10 px-3 py-1 text-brand-orange font-medium transition hover:bg-brand-orange hover:text-slate-950">中文</a>
+        
+        <button id="mobile-menu-btn" class="text-slate-200 hover:text-white focus:outline-none"
+          aria-label="Toggle menu">
+          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu"
+      class="hidden lg:hidden bg-slate-950/95 border-t border-slate-900 px-6 py-4 space-y-3 transition-all duration-300">
+      
+      <a href="/inyc/index.html#home"
+        class="block text-slate-200 hover:text-white py-2 text-base font-medium">Home</a>
+      <a href="/inyc/screening.html"
+        class="block text-slate-200 hover:text-white py-2 text-base font-medium">Autism Screener</a>
+      <a href="/inyc/index.html#resources"
+        class="block text-slate-200 hover:text-white py-2 text-base font-medium">Resources</a>
+      <a href="/inyc/index.html#pamphlets"
+        class="block text-slate-200 hover:text-white py-2 text-base font-medium">Pamphlets</a>
+      <a href="/inyc/index.html#contact"
+        class="block text-slate-200 hover:text-white py-2 text-base font-medium">Contact & Presentations</a>
+      
+    </div>
+  </div>
+
+  
+  
+
+  
+  <!-- Homepage layout - full width with no extra container -->
+  <main id="main-content" class="flex-grow">
+    <!-- Hero Section -->
+<section id="home" class="relative min-h-[90vh] flex items-center justify-center bg-slate-900 overflow-hidden pt-28">
+  <div class="absolute inset-0 z-0">
+    <img src="/inyc/assets/hero_bg.png" alt="Parent and toddler playing with blocks" class="w-full h-full object-cover object-center opacity-65" />
+    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/60 to-transparent"></div>
+  </div>
+  
+  <div class="relative z-10 text-center px-4 max-w-4xl mx-auto flex flex-col items-center">
+    <h2 class="font-cursive text-brand-orange text-3xl md:text-5xl mb-4 tracking-wide font-bold drop-shadow-md">International NeuroHealth Youth Council</h2>
+    <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight text-white mb-6 uppercase max-w-3xl drop-shadow-lg leading-tight">
+      INYC
+    </h1>
+    <p class="font-mono text-slate-200 text-xs md:text-sm tracking-widest uppercase mb-10 border border-slate-500/30 bg-slate-950/70 px-6 py-2.5 rounded-full backdrop-blur-sm max-w-2xl">
+      Youth-led neurohealth literacy and bilingual early support for families
+    </p>
+    
+    <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center items-center">
+      <a href="#programs" class="w-full sm:w-auto text-center px-8 py-3.5 text-xs font-bold tracking-widest uppercase border-2 border-brand-orange bg-brand-orange text-slate-950 rounded-full transition-all duration-300 hover:bg-transparent hover:text-brand-orange">
+        Our Work
+      </a>
+      <a href="#resources" class="w-full sm:w-auto text-center px-8 py-3.5 text-xs font-bold tracking-widest uppercase border-2 border-white text-white rounded-full transition-all duration-300 hover:bg-white hover:text-slate-950">
+        Autism Resources
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- About INYC Section -->
+<section id="overview" class="py-24 bg-white scroll-mt-20">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+    <div class="relative">
+      <div class="absolute -inset-2 bg-amber-500/10 rounded-[2.5rem] blur-xl"></div>
+      <img src="/inyc/assets/autism_early_signs_visual.svg" alt="Early developmental signs visual used across INYC family education" class="relative w-full h-auto rounded-[2rem] border border-slate-200/80 bg-slate-50 p-6 shadow-sm hover:shadow-md transition duration-300" />
+    </div>
+    
+    <div class="space-y-6">
+      <span class="text-brand-orange font-bold uppercase tracking-wider text-xs block">Who We Are</span>
+      <h2 class="font-serif text-brand-maroon text-3xl md:text-4xl font-extrabold tracking-tight">A youth council for neurohealth literacy</h2>
+      
+      <p class="text-slate-600 leading-relaxed text-lg">
+        The International NeuroHealth Youth Council (INYC) is a youth-led initiative based in Vienna, VA, founded by Emma Zheng with a Child Find psychologist as advisor. We help families understand early brain and developmental health, reduce stigma, and find practical next steps across language and culture.
+      </p>
+      
+      <p class="text-slate-600 leading-relaxed">
+        Our focus is bilingual, evidence-informed education for Chinese-speaking communities in the United States and China. We pair clear family guidance with community workshops, printable tools, and an online hub that stays free and open. Early autism awareness is our flagship program; the broader council mission covers neurodevelopmental literacy, caregiver confidence, and youth partnership across borders.
+      </p>
+      
+      <div class="pt-4 border-t border-slate-100 space-y-4">
+        <h4 class="font-bold text-slate-800 text-sm uppercase tracking-wide">How we work</h4>
+        <ul class="space-y-3">
+          <li class="flex items-start gap-3">
+            <svg class="h-5 w-5 text-brand-orange shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+            </svg>
+            <span class="text-slate-700 text-sm"><strong>Youth leadership:</strong> Students design materials, run workshops, and coordinate partners with clinical advisor review.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg class="h-5 w-5 text-brand-orange shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+            </svg>
+            <span class="text-slate-700 text-sm"><strong>Bilingual by design:</strong> English and Mandarin resources so families can act without waiting for a perfect translation.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg class="h-5 w-5 text-brand-orange shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+            </svg>
+            <span class="text-slate-700 text-sm"><strong>Local to global:</strong> Outreach through schools, churches, and community partners in the DMV and rural China.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg class="h-5 w-5 text-brand-orange shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+            </svg>
+            <span class="text-slate-700 text-sm"><strong>Open access:</strong> Website, screening tool, and pamphlets remain free to download, print, and share.</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Programs / Workstreams -->
+<section id="programs" class="py-24 bg-slate-50 scroll-mt-20 border-t border-slate-200/40">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <span class="text-brand-orange font-bold uppercase tracking-wider text-xs block mb-2">Our Work</span>
+      <h2 class="font-serif text-brand-maroon text-3xl md:text-4xl font-extrabold tracking-tight">Programs &amp; focus areas</h2>
+      <p class="text-slate-500 mt-4 leading-relaxed">
+        INYC organizes its work around neurohealth literacy for families. Early Autism Awareness is the flagship program with live tools and workshops; adjacent focus areas guide how we grow.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="bg-white rounded-3xl border border-brand-orange/30 p-8 shadow-sm ring-1 ring-brand-orange/10">
+        <span class="inline-block text-[10px] font-bold uppercase tracking-widest text-brand-orange mb-3">Flagship</span>
+        <h3 class="text-xl font-bold text-brand-maroon mb-3">Early Autism Awareness</h3>
+        <p class="text-slate-600 text-sm leading-relaxed mb-6">
+          Bilingual screening guidance, printable pamphlets, community workshops in the DMV and China, and an interactive online screener for Chinese-speaking families.
+        </p>
+        <ul class="space-y-2 text-xs text-slate-500 mb-6">
+          <li>35+ local parents reached through schools and churches</li>
+          <li>25 seminar attendees in China</li>
+          <li>500 printed bilingual brochures; open web hub</li>
+        </ul>
+        <a href="#resources" class="text-xs font-bold uppercase tracking-wider text-brand-blue hover:underline">Explore autism resources &rarr;</a>
+      </div>
+
+      <div class="bg-white rounded-3xl border border-slate-200/75 p-8 shadow-sm">
+        <span class="inline-block text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-3">Focus area</span>
+        <h3 class="text-xl font-bold text-slate-800 mb-3">Family NeuroHealth Literacy</h3>
+        <p class="text-slate-600 text-sm leading-relaxed mb-6">
+          Clear, bilingual education on early brain development, developmental milestones, and when to seek evaluation, so caregivers can act with confidence rather than stigma or guesswork.
+        </p>
+        <p class="text-xs text-slate-400">Builds on the same advisor-reviewed materials used in workshops and pamphlets.</p>
+      </div>
+
+      <div class="bg-white rounded-3xl border border-slate-200/75 p-8 shadow-sm">
+        <span class="inline-block text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-3">Focus area</span>
+        <h3 class="text-xl font-bold text-slate-800 mb-3">Youth Partnerships Across Borders</h3>
+        <p class="text-slate-600 text-sm leading-relaxed mb-6">
+          Student teammates and community partners in the US and China help host workshops, restock materials, and keep bilingual guidance available where families already gather.
+        </p>
+        <p class="text-xs text-slate-400">Schools, churches, and rural preschool networks keep outreach going after events end.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Resources / Early Signs Section -->
+<section id="resources" class="py-24 bg-white scroll-mt-20 border-b border-slate-100">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <span class="text-brand-orange font-bold uppercase tracking-wider text-xs block mb-2">Milestones & Warning Signs</span>
+      <h2 class="font-serif text-brand-maroon text-3xl md:text-4xl font-extrabold tracking-tight">Early Signs & Developmental Red Flags</h2>
+      <p class="text-slate-500 mt-4 leading-relaxed">
+        Autism is a neurodevelopmental condition that can sometimes be detected at 18 months or younger. By about age 3, a child's brain is roughly 80% of adult size; by about age 5, roughly 90%. Recognizing warning signs helps families of children ages 0–5 seek support earlier, which is generally associated with better long-term outcomes.
+      </p>
+    </div>
+
+    <!-- Red Flags Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+      <div class="bg-slate-50 rounded-3xl border border-slate-200/60 p-8 shadow-sm">
+        <h3 class="text-xl font-bold text-brand-maroon mb-4 flex items-center gap-2">
+          <span class="flex h-8 w-8 items-center justify-center rounded-full bg-brand-maroon text-white text-sm font-mono">1</span>
+          Social & Communication Milestones
+        </h3>
+        <ul class="space-y-3 text-slate-600 text-sm leading-relaxed">
+          <li class="flex items-start gap-2">
+            <span class="text-brand-orange shrink-0 font-bold">&bull;</span>
+            <span><strong>No response to name:</strong> Does not turn or respond when their name is called by about 9 months (CDC 2022 milestone; often mistaken for hearing difficulties).</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-brand-orange shrink-0 font-bold">&bull;</span>
+            <span><strong>Lack of joint attention:</strong> Does not point to show you something interesting (e.g., pointing to an airplane or toy) by 18 months, or does not look when you point.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-brand-orange shrink-0 font-bold">&bull;</span>
+            <span><strong>No sharing of interests:</strong> Does not bring or show toys/objects to parents just to share excitement by 15 months.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-brand-orange shrink-0 font-bold">&bull;</span>
+            <span><strong>No imitation:</strong> Does not imitate simple actions, sounds, or facial expressions by 18 months.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-brand-orange shrink-0 font-bold">&bull;</span>
+            <span><strong>No interactive play:</strong> Does not play simple interactive games (like peek-a-boo, pat-a-cake) or wave "bye-bye" by 12 months.</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="bg-slate-50 rounded-3xl border border-slate-200/60 p-8 shadow-sm">
+        <h3 class="text-xl font-bold text-brand-maroon mb-4 flex items-center gap-2">
+          <span class="flex h-8 w-8 items-center justify-center rounded-full bg-brand-maroon text-white text-sm font-mono">2</span>
+          Play & Behavioral Patterns
+        </h3>
+        <ul class="space-y-3 text-slate-600 text-sm leading-relaxed">
+          <li class="flex items-start gap-2">
+            <span class="text-brand-orange shrink-0 font-bold">&bull;</span>
+            <span><strong>Absence of pretend play:</strong> Little or no imaginative play (e.g., pretending to feed a doll, talk on a toy phone, or push a block like a car) by about 30 months (CDC 2022 milestone).</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-brand-orange shrink-0 font-bold">&bull;</span>
+            <span><strong>Repetitive behaviors:</strong> Repeatedly flaps hands, rocks their body, or spins in circles.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-brand-orange shrink-0 font-bold">&bull;</span>
+            <span><strong>Unusual play focus:</strong> Plays with toys in unusual ways, such as repeatedly spinning the wheels of a toy car or lining up objects instead of playing with them, getting highly distressed if their order is disrupted.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-brand-orange shrink-0 font-bold">&bull;</span>
+            <span><strong>Sensory sensitivities:</strong> Showing extreme distress at everyday sounds (like vacuum cleaners or blenders), or having unusual fascinations with lights or spinning objects.</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Golden Rule warning callout -->
+    <div class="bg-red-50 border-l-4 border-red-500 p-6 rounded-r-3xl shadow-sm mb-16">
+      <h4 class="font-bold text-red-900 flex items-center gap-2 mb-2">
+        <svg class="h-5 w-5 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+        </svg>
+        The "Golden Rule" Red Flag (Any Age)
+      </h4>
+      <p class="text-red-700 text-sm leading-relaxed">
+        <strong>Any regression or loss of skills</strong> (including speech, babbling, eye contact, gestures, or social abilities at any age) is a significant red flag. Contact your pediatrician promptly; do not wait for the next well-child visit.
+      </p>
+    </div>
+
+    <!-- Screening Pathways & Flowcharts -->
+    <div class="border-t border-slate-100 pt-16">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <span class="text-brand-orange font-bold uppercase tracking-wider text-xs block mb-2">Step-by-Step Path</span>
+        <h3 class="font-serif text-brand-maroon text-2xl md:text-3xl font-extrabold tracking-tight">How to Get Help: Screening & Evaluation</h3>
+        <p class="text-slate-500 text-sm mt-3">Follow this step-by-step path to guide your family from initial concerns to accessing services.</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+        <div>
+          <img src="/inyc/assets/autism_screening_timeline.svg" alt="Autism Screening & Developmental Checkpoints Timeline" class="w-full h-auto rounded-3xl border border-slate-200/60 p-6 bg-slate-50 shadow-sm" />
+        </div>
+        <div>
+          <img src="/inyc/assets/how_to_get_help_flowchart.svg" alt="Bilingual Step-by-Step Path to Get Help Flowchart" class="w-full h-auto rounded-3xl border border-slate-200/60 p-6 bg-slate-50 shadow-sm" />
+        </div>
+      </div>
+
+      <!-- Authorities Links -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div>
+          <h4 class="font-bold text-slate-800 text-sm uppercase tracking-wide mb-4">Official Health Resources</h4>
+          <ul class="space-y-3 text-slate-600 text-sm">
+            <li>&bull; <a href="https://www.cdc.gov/ncbddd/autism/screening.html" target="_blank" rel="noopener" class="text-brand-blue hover:underline font-medium">CDC: Screening for Autism Spectrum Disorder</a>: Developmental monitoring guidelines.</li>
+            <li>&bull; <a href="https://www.cdc.gov/ncbddd/autism/index.html" target="_blank" rel="noopener" class="text-brand-blue hover:underline font-medium">CDC: Autism Spectrum Disorder (ASD)</a>: Evidence-based resources and information.</li>
+            <li>&bull; <a href="https://www.cdc.gov/actearly" target="_blank" rel="noopener" class="text-brand-blue hover:underline font-medium">CDC "Learn the Signs. Act Early"</a>: Milestone checklist and family tracker (materials available in Chinese). Checklists help track concerns but do not replace formal developmental or autism screening.</li>
+            <li>&bull; <a href="https://www.nichd.nih.gov/health/topics/autism" target="_blank" rel="noopener" class="text-brand-blue hover:underline font-medium">NIH / NICHD: Autism and Early Intervention</a>: Research-backed developmental care.</li>
+            <li>&bull; <a href="https://www.autismspeaks.org/" target="_blank" rel="noopener" class="text-brand-blue hover:underline font-medium">Autism Speaks Homepage</a>: Advocacy and family support resources.</li>
+            <li>&bull; <a href="https://www.autismspeaks.org/tool-kit/100-day-kit-young-children" target="_blank" rel="noopener" class="text-brand-blue hover:underline font-medium">Autism Speaks 100-Day Kit for Young Children</a>: Practical first-100-days toolkit after a diagnosis (children 4 and under; Chinese available).</li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-bold text-slate-800 text-sm uppercase tracking-wide mb-4">Local Northern Virginia (DMV) Contacts</h4>
+          <ul class="space-y-3 text-slate-600 text-sm">
+            <li>&bull; <strong>Infant &amp; Toddler Connection (ITC) (703) 246-7121</strong>: <em>Single point of entry</em> for early intervention, ages 0–3. Anyone can refer; services regardless of ability to pay. <strong>No SSN needed to make a referral.</strong> <a href="https://www.fairfaxcounty.gov/neighborhood-community-services/infant-and-toddler-connection" target="_blank" rel="noopener" class="text-brand-blue hover:underline font-medium">Fairfax ITC website</a>.</li>
+            <li>&bull; <a href="https://www.fcps.edu/academics/curriculum/early-childhood-education/early-childhood-child-find" target="_blank" rel="noopener" class="text-brand-blue hover:underline font-medium">Child Find (FCPS) 571-423-4121</a>: Free developmental screening, ages 20 months–5 years (Fairfax County / City residents); child must turn 2 by Sept 30. Falls Church City has its own Child Find.</li>
+            <li>&bull; <a href="https://asnv.org/" target="_blank" rel="noopener" class="text-brand-blue hover:underline font-medium">ASNV (asnv.org)</a>: Autism Society of Northern Virginia: education programs, support groups, and community resources.</li>
+          </ul>
+        </div>
+      </div>
+      <p class="mt-4 text-xs text-slate-400 italic">
+        Family resource recommendations above (Autism Speaks, the 100-Day Kit, Fairfax Infant and Toddler Connection, and FCPS Child Find) recommended by project advisor Sandi Horton-Lafferty, Psychologist.
+      </p>
+
+      <!-- Understanding the Autism Spectrum (Color Wheel) -->
+      <div class="mt-16 border-t border-slate-100 pt-16">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <!-- SVG Visual Column -->
+          <div class="lg:col-span-5 flex justify-center">
+            <div class="bg-slate-50 border border-slate-200/60 rounded-3xl p-6 shadow-sm max-w-sm w-full flex flex-col items-center text-center space-y-4">
+              <h5 class="text-xs font-extrabold text-slate-400 uppercase tracking-wider">Visualizing Neurodiversity</h5>
+              <span class="text-sm font-bold text-slate-800 font-serif">The Multidimensional Spectrum Wheel</span>
+              
+              <svg viewBox="-22 0 244 206" class="w-full h-auto max-w-[240px]">
+                <!-- Background grid circles -->
+                <circle cx="100" cy="100" r="80" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="2 2" fill="none" />
+                <circle cx="100" cy="100" r="60" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="2 2" fill="none" />
+                <circle cx="100" cy="100" r="40" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="2 2" fill="none" />
+                <circle cx="100" cy="100" r="20" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="2 2" fill="none" />
+                
+                <!-- Spokes -->
+                <line x1="100" y1="20" x2="100" y2="180" stroke="#cbd5e1" stroke-width="1" />
+                <line x1="20" y1="100" x2="180" y2="100" stroke="#cbd5e1" stroke-width="1" />
+                <line x1="43.4" y1="43.4" x2="156.6" y2="156.6" stroke="#cbd5e1" stroke-width="1" />
+                <line x1="43.4" y1="156.6" x2="156.6" y2="43.4" stroke="#cbd5e1" stroke-width="1" />
+                
+                <!-- Colored Outer Segments / Indicators -->
+                <!-- Sensory (Pink) -->
+                <circle cx="100" cy="20" r="6" fill="#f43f5e" />
+                <text x="100" y="12" font-size="6" text-anchor="middle" fill="#f43f5e" font-weight="bold">Sensory</text>
+                
+                <!-- Communication (Blue) -->
+                <circle cx="156.6" cy="43.4" r="6" fill="#3b82f6" />
+                <text x="166" y="42" font-size="6" text-anchor="start" fill="#3b82f6" font-weight="bold">Language</text>
+                
+                <!-- Social (Teal) -->
+                <circle cx="180" cy="100" r="6" fill="#14b8a6" />
+                <text x="189" y="102" font-size="6" text-anchor="start" fill="#14b8a6" font-weight="bold">Social</text>
+                
+                <!-- Motor (Green) -->
+                <circle cx="156.6" cy="156.6" r="6" fill="#22c55e" />
+                <text x="166" y="162" font-size="6" text-anchor="start" fill="#22c55e" font-weight="bold">Motor</text>
+                
+                <!-- Executive (Yellow) -->
+                <circle cx="100" cy="180" r="6" fill="#eab308" />
+                <text x="100" y="191" font-size="6" text-anchor="middle" fill="#eab308" font-weight="bold">Executive</text>
+                
+                <!-- Routines (Orange) -->
+                <circle cx="43.4" cy="156.6" r="6" fill="#f97316" />
+                <text x="34" y="162" font-size="6" text-anchor="end" fill="#f97316" font-weight="bold">Routines</text>
+                
+                <!-- Interests (Purple) -->
+                <circle cx="20" cy="100" r="6" fill="#a855f7" />
+                <text x="11" y="102" font-size="6" text-anchor="end" fill="#a855f7" font-weight="bold">Interests</text>
+                
+                <!-- Perception (Violet) -->
+                <circle cx="43.4" cy="43.4" r="6" fill="#6366f1" />
+                <text x="34" y="42" font-size="6" text-anchor="end" fill="#6366f1" font-weight="bold">Perception</text>
+                
+                <!-- Example Profile Polygon overlay showing custom shape (Neurodiverse Profile Example) -->
+                <polygon points="100,50 142.4,57.6 156,100 134,134 100,130 65,139 52,100 65,65" fill="#0284c7" fill-opacity="0.25" stroke="#0284c7" stroke-width="2" />
+              </svg>
+              <p class="text-[10px] text-slate-400 italic">
+                Example of an individual's unique developmental profile shape.
+              </p>
+            </div>
+          </div>
+          
+          <!-- Text Explanation Column -->
+          <div class="lg:col-span-7 space-y-5">
+            <span class="text-brand-orange font-bold uppercase tracking-wider text-xs block">Shifting Perspectives</span>
+            <h4 class="font-serif text-brand-maroon text-2xl md:text-3xl font-extrabold tracking-tight">The Autism Color Wheel & Spectrum</h4>
+            <p class="text-slate-600 text-sm md:text-base leading-relaxed">
+              The autism community is shifting how it conceptualizes autism. Instead of a linear, oversimplified line running from "mild/high-functioning" to "severe/low-functioning," autism is best understood as a <strong>multidimensional color wheel</strong>: a visual that explains varying characteristics and shows that different individuals may experience differences in severity within each feature.
+            </p>
+            <p class="text-slate-600 text-sm md:text-base leading-relaxed">
+              Each "spoke" of the wheel represents a different neurodevelopmental area (such as sensory sensitivity, language comprehension, social reciprocity, and executive functioning). Rather than being generally "high" or "low," an individual's profile forms a unique shape based on varying characteristics and strengths across these dimensions.
+            </p>
+            <div class="bg-slate-50 border border-slate-200/60 rounded-2xl p-5 text-xs text-slate-500 leading-normal">
+              <strong>Key Takeaway:</strong> A child might require high support for sensory input processing, but have strong verbal language skills. Another might show deep expertise in specialized interests while needing help navigating unstructured social environments. The color wheel model ensures we recognize and support each child's individual strengths.
+            </div>
+            <p class="text-xs text-slate-400 italic">
+              Color wheel framing recommended for family education by project advisor Sandi Horton-Lafferty, Psychologist.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-12 bg-sky-50 border border-sky-100 rounded-3xl p-6 md:p-8">
+        <h4 class="font-bold text-brand-blue text-sm uppercase tracking-wide mb-4">Culturally-Sensitive Bilingual Services</h4>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-slate-600 text-sm">
+          <p>
+            &bull; <a href="https://www.autismspeaks.org/chinese-resources" target="_blank" rel="noopener" class="text-brand-blue hover:underline font-semibold">Autism Speaks Chinese Toolkits</a>: Downloadable guides translated into Chinese (100 Day Kit, ABA Guide, safety resources).
+          </p>
+          <p>
+            &bull; <a href="https://www.caresseattle.org/" target="_blank" rel="noopener" class="text-brand-blue hover:underline font-semibold">CARES (Chinese Autism Resources & Service)</a>: Sensitive peer support and workshops specifically tailored for Chinese families.
+          </p>
+        </div>
+      </div>
+
+      <!-- China / Hubei Local Resources -->
+      <div class="mt-8 bg-amber-50/70 border border-amber-200/60 rounded-3xl p-6 md:p-8">
+        <div class="flex items-center gap-2 mb-4">
+          <span class="inline-block w-2.5 h-2.5 rounded-full bg-brand-orange"></span>
+          <h4 class="font-bold text-brand-maroon text-sm uppercase tracking-wide">Hubei Province Clinical & Early Intervention Contacts (Global Outreach)</h4>
+        </div>
+        <p class="text-xs text-slate-600 mb-6 leading-relaxed">
+          Supporting the rural China outreach arm of this project: verified local screening and diagnostic centers for families in Hubei Province:
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-slate-700 text-sm">
+          <div class="space-y-3">
+            <div class="bg-white/80 rounded-2xl p-4 border border-amber-100">
+              <strong class="text-slate-900 block mb-1">Hubei Provincial Maternal and Child Health Hospital</strong>
+              <p class="text-xs text-slate-600 leading-relaxed">Department of Child Health Care provides developmental assessments, M-CHAT-R/F screenings, and clinical referrals.</p>
+            </div>
+            <div class="bg-white/80 rounded-2xl p-4 border border-amber-100">
+              <strong class="text-slate-900 block mb-1">Wuhan Children's Hospital</strong>
+              <p class="text-xs text-slate-600 leading-relaxed">Department of Neurology and Developmental-Behavioral Pediatrics provides comprehensive diagnosis and rehabilitation planning.</p>
+            </div>
+          </div>
+          <div class="space-y-3">
+            <div class="bg-white/80 rounded-2xl p-4 border border-amber-100">
+              <strong class="text-slate-900 block mb-1">Hubei Disabled Persons' Federation (Targeted Rehabilitation)</strong>
+              <p class="text-xs text-slate-600 leading-relaxed">Oversees official rehabilitation subsidies for eligible children aged 0–6 with developmental delays or autism spectrum disorder.</p>
+            </div>
+            <div class="bg-white/80 rounded-2xl p-4 border border-amber-100">
+              <strong class="text-slate-900 block mb-1">National Disabled Persons Helpline: 12385</strong>
+              <p class="text-xs text-slate-600 leading-relaxed">Assists families in locating county-level designated rehabilitation centers and applying for local support policies.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Pamphlets Section -->
+<section id="pamphlets" class="py-24 bg-slate-100/60 scroll-mt-20 border-b border-slate-200/50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <span class="text-brand-orange font-bold uppercase tracking-wider text-xs block mb-2">Bilingual Brochure Templates</span>
+      <h2 class="font-serif text-brand-maroon text-3xl md:text-4xl font-extrabold tracking-tight">Printable Pamphlets & Downloads</h2>
+      <p class="text-slate-500 mt-4 leading-relaxed">
+        Below are bilingual pamphlet templates generated as part of our community outreach. Pediatric clinics, churches, libraries, and schools are welcome to download, print, and distribute these materials freely.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div class="bg-white rounded-3xl border border-slate-200/70 p-6 shadow-sm">
+        <img src="/inyc/assets/pamphlet_cover_illustration.svg" alt="Bilingual Informational Pamphlet Cover Illustration" class="w-full h-auto rounded-2xl border border-slate-100 block" />
+      </div>
+
+      <div class="space-y-8">
+        <div>
+          <h3 class="text-2xl font-bold text-brand-maroon mb-3">Community Distribution Resources</h3>
+          <p class="text-slate-600 leading-relaxed text-sm">
+            Our pamphlets highlight critical developmental milestones and contact pathways in a clear, bilingual side-by-side format. They help resolve cultural taboos and provide clear call-to-actions for local services.
+          </p>
+        </div>
+
+        <div class="space-y-4">
+          <!-- English pamphlet -->
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between bg-white rounded-2xl border border-slate-200/75 p-5 shadow-sm hover:shadow transition-shadow gap-4">
+            <div class="flex items-center gap-4">
+              <div class="h-10 w-10 rounded-xl bg-amber-50 border border-amber-100 flex items-center justify-center text-brand-orange shrink-0">
+                <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <div>
+                <h4 class="font-bold text-slate-800 text-sm">English Pamphlet</h4>
+                <p class="text-xs text-slate-400">Standard printable version</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-2">
+              <a href="/inyc/assets/pamphlet-en.html" target="_blank" class="px-4 py-2 text-xs font-semibold uppercase tracking-wider text-slate-700 bg-slate-100 rounded-full transition hover:bg-slate-200">
+                View & Print
+              </a>
+              <a href="/inyc/assets/pamphlet-en.pdf" target="_blank" class="px-4 py-2 text-xs font-bold uppercase tracking-wider bg-brand-orange text-slate-950 rounded-full transition hover:bg-amber-600">
+                Download PDF
+              </a>
+            </div>
+          </div>
+
+          <!-- Mandarin pamphlet -->
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between bg-white rounded-2xl border border-slate-200/75 p-5 shadow-sm hover:shadow transition-shadow gap-4">
+            <div class="flex items-center gap-4">
+              <div class="h-10 w-10 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center text-brand-blue shrink-0">
+                <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <div>
+                <h4 class="font-bold text-slate-800 text-sm">Chinese Pamphlet (DMV)</h4>
+                <p class="text-xs text-slate-400">Mandarin version with local Fairfax contacts</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-2">
+              <a href="/inyc/assets/pamphlet-dmv-cn.html" target="_blank" class="px-4 py-2 text-xs font-semibold uppercase tracking-wider text-slate-700 bg-slate-100 rounded-full transition hover:bg-slate-200">
+                View & Print
+              </a>
+              <a href="/inyc/assets/pamphlet-dmv-cn.pdf" target="_blank" class="px-4 py-2 text-xs font-bold uppercase tracking-wider bg-brand-orange text-slate-950 rounded-full transition hover:bg-amber-600">
+                Download PDF
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonial Block -->
+<section class="py-20 bg-white">
+  <div class="max-w-4xl mx-auto px-4 text-center">
+    <span class="text-brand-orange font-bold uppercase tracking-wider text-xs block mb-2">Our Mission</span>
+    <h2 class="font-serif text-brand-maroon text-2xl md:text-3xl font-extrabold tracking-tight mb-10">What guides our work...</h2>
+    
+    <div class="relative bg-sky-50/70 border border-sky-100 rounded-3xl p-8 md:p-12 shadow-sm">
+      <div class="absolute top-4 left-6 text-6xl text-sky-200/80 font-serif pointer-events-none select-none">“</div>
+      
+      <p class="relative z-10 text-slate-700 text-lg md:text-xl font-medium leading-relaxed italic">
+        When families have culturally sensitive, bilingual guidance on early brain and developmental health, stigma gives way to action. Youth leadership makes that guidance reachable in the communities that need it most.
+      </p>
+      
+      <div class="absolute bottom-4 right-8 text-6xl text-sky-200/80 font-serif pointer-events-none select-none">”</div>
+      <div class="mt-6 text-sm font-bold uppercase tracking-wider text-brand-blue">INYC Mission</div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact & Presentations Section -->
+<section id="contact" class="py-24 bg-slate-50 scroll-mt-20 border-t border-slate-200/40">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <span class="text-brand-orange font-bold uppercase tracking-wider text-xs block mb-2">Outreach Requests</span>
+      <h2 class="font-serif text-brand-maroon text-3xl md:text-4xl font-extrabold tracking-tight">Presentations & Contact</h2>
+      <p class="text-slate-500 mt-4 leading-relaxed">
+        We offer bilingual informational seminars (virtual or in-person) for local community clinics, preschools, and parent assemblies. Contact us to schedule a presentation.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+      <!-- Venue 1 -->
+      <div class="bg-white rounded-3xl border border-slate-200/75 p-8 shadow-sm">
+        <h4 class="text-slate-400 font-bold uppercase tracking-wider text-xs mb-2">Primary Venue</h4>
+        <h3 class="text-lg font-bold text-brand-maroon mb-3">Hope Chinese School (HCS-TC)</h3>
+        <p class="text-slate-600 text-sm leading-relaxed mb-6">
+          Tyson's Corner Campus is the closest venue to Vienna. Classes meet Saturday/Sunday. Presentations are held during the parent break period (roughly 2–4 PM) for maximum outreach.
+        </p>
+        <a href="https://www.hopechineseschool.org/hcstc/" target="_blank" rel="noopener" class="text-xs font-bold text-brand-blue hover:underline">
+          hopechineseschool.org/hcstc &rarr;
+        </a>
+      </div>
+
+      <!-- Venue 2 -->
+      <div class="bg-white rounded-3xl border border-slate-200/75 p-8 shadow-sm">
+        <h4 class="text-slate-400 font-bold uppercase tracking-wider text-xs mb-2">Secondary Venue</h4>
+        <h3 class="text-lg font-bold text-brand-maroon mb-3">CCCVA Community</h3>
+        <p class="text-slate-600 text-sm leading-relaxed mb-6">
+          Located at 541 Marshall Rd. SW, Vienna, VA 22180. Serves as our primary Chinese church venue for DMV area outreach. Presentations are coordinated directly through the church leadership.
+        </p>
+        <span class="text-xs text-slate-400 font-semibold uppercase tracking-wider">Vienna, VA</span>
+      </div>
+
+      <!-- Advisor / Leadership -->
+      <div class="bg-white rounded-3xl border border-slate-200/75 p-8 shadow-sm flex flex-col justify-between">
+        <div>
+          <h4 class="text-slate-400 font-bold uppercase tracking-wider text-xs mb-2">Project Advisor</h4>
+          <h3 class="text-lg font-bold text-slate-800 mb-3">Sandi Horton-Lafferty, Psychologist</h3>
+          <p class="text-slate-600 text-sm leading-relaxed mb-6">
+            Project advisor supporting clinical accuracy, early-intervention guidance, and bilingual resource reviews.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Email CTA Box -->
+    <div class="bg-brand-maroon text-white rounded-3xl p-10 text-center shadow-lg relative overflow-hidden">
+      <div class="absolute -right-16 -top-16 h-36 w-36 rounded-full bg-white/5"></div>
+      <div class="relative z-10 max-w-2xl mx-auto">
+        <h3 class="text-2xl font-bold mb-3">Request a Bilingual Presentation</h3>
+        <p class="text-slate-200 text-sm mb-6 leading-relaxed">
+          Please contact INYC founder Emma Zheng to coordinate. Available to speak at Chinese schools, church groups, clinics, and community resource centers.
+        </p>
+        <a href="mailto:ezhengva@gmail.com" class="inline-block px-8 py-3.5 bg-brand-orange text-slate-950 font-bold uppercase tracking-wider text-xs rounded-full hover:bg-amber-600 transition-colors">
+          ezhengva@gmail.com
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Partners and Collaborators Grid -->
+<section class="py-24 gold-brown-blur text-white border-t border-slate-900/60">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+    <span class="text-brand-orange font-bold uppercase tracking-wider text-xs block mb-2">Working Together</span>
+    <h2 class="font-serif text-white text-2xl md:text-3xl font-extrabold mb-12">Partners & Collaborators</h2>
+    
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
+      <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-colors flex flex-col justify-center items-center">
+        <h4 class="text-sm font-bold text-slate-200 tracking-wider uppercase mb-1">Hope Chinese School</h4>
+        <p class="text-slate-400 text-xs mt-1 text-center">Bilingual outreach seminars and parent assemblies (Liaison: Xueqin Chen)</p>
+      </div>
+
+      <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-colors flex flex-col justify-center items-center">
+        <h4 class="text-sm font-bold text-slate-200 tracking-wider uppercase mb-1">CCCVA</h4>
+        <p class="text-slate-400 text-xs mt-1 text-center">Vienna church literature rack & continuous restocking hub (Liaison: Carol Day)</p>
+      </div>
+
+      <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-colors flex flex-col justify-center items-center">
+        <h4 class="text-sm font-bold text-slate-200 tracking-wider uppercase mb-1">China Outreach Team</h4>
+        <p class="text-slate-400 text-xs mt-1 text-center">Rural distribution & supply monitoring (Liaisons: Xinyan Luo, ECUST; Deng Weiou, Huangpi 2nd High School)</p>
+      </div>
+
+      <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-colors flex flex-col justify-center items-center">
+        <h4 class="text-sm font-bold text-slate-200 tracking-wider uppercase mb-1">Sandi Horton-Lafferty</h4>
+        <p class="text-slate-400 text-xs mt-1 text-center">Project advisor; Psychologist</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  </main>
+  
+
+  <!-- Global Redesigned Footer -->
+  <footer class="gold-brown-blur text-slate-300 py-16 border-t border-amber-950/20 relative z-10">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 border-b border-slate-800/80 pb-12 mb-8">
+        <div>
+          <h4 class="text-brand-orange font-bold uppercase tracking-wider text-xs mb-4">
+            Contact Us
+          </h4>
+          <p class="text-lg text-white font-medium mb-4">ezhengva@gmail.com</p>
+        </div>
+
+        <div class="flex flex-col justify-between">
+          <div>
+            <h4 class="text-brand-blue font-bold uppercase tracking-wider text-xs mb-4">
+              About INYC
+            </h4>
+            <p class="text-slate-400 text-sm max-w-md leading-relaxed">
+              
+              The International NeuroHealth Youth Council (INYC) is a youth-led initiative for neurohealth
+              literacy and bilingual early support. Our flagship program is Early Autism Awareness for
+              Chinese-speaking families. All digital and print materials are free to download and distribute.
+              
+            </p>
+          </div>
+          <div class="mt-8 md:mt-0 text-slate-500 text-xs">
+            <p class="mb-1">&copy; 2024&ndash;Present INYC. All rights reserved.</p>
+            <p class="mb-1">Sources: NIH, CDC,
+              ChildFind; Advisor: Sandi Horton-Lafferty (Psychologist). Links on the Resources page.</p>
+            <p class="mt-2 text-[10px] text-slate-600 font-mono">
+              Last updated: November 01, 2026 (1615e68)
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function checkIsHome() {
+      const p = window.location.pathname.replace(/\/$/, '');
+      return p === '' ||
+        p === '/index.html' ||
+        p === '/zh' ||
+        p === '/zh/index.html' ||
+        p === '/inyc' ||
+        p.endsWith('/inyc/index.html') ||
+        p.endsWith('/inyc/zh') ||
+        p.endsWith('/inyc/zh/index.html');
+    }
+
+    function isSamePagePath(url1, url2) {
+      try {
+        const u1 = new URL(url1);
+        const u2 = new URL(url2);
+        const p1 = u1.pathname.replace(/\/$/, '').replace('/inyc', '') || '/index.html';
+        const p2 = u2.pathname.replace(/\/$/, '').replace('/inyc', '') || '/index.html';
+        return p1 === p2;
+      } catch (e) {
+        return false;
+      }
+    }
+
+    function smoothScrollToHash(hash) {
+      if (!hash) return;
+      const targetId = hash.replace('#', '');
+      const targetEl = document.getElementById(targetId);
+      if (targetEl) {
+        const headerOffset = 90;
+        const elementPosition = targetEl.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+      }
+    }
+
+    function updateLanguageSwitches(hash) {
+      const langSwitches = document.querySelectorAll('.lang-switch-btn');
+      langSwitches.forEach(btn => {
+        try {
+          const url = new URL(btn.href);
+          url.hash = hash;
+          btn.href = url.href;
+        } catch (e) { }
+      });
+    }
+
+    function highlightActiveLink(forcedHash) {
+      const navLinks = document.querySelectorAll('header nav a, #mobile-menu a');
+      const isScreeningPage = window.location.pathname.includes('/screening');
+
+      if (isScreeningPage) {
+        navLinks.forEach(link => {
+          try {
+            const linkUrl = new URL(link.href);
+            if (linkUrl.pathname.includes('/screening')) {
+              link.classList.add('text-brand-orange');
+              link.classList.remove('text-slate-200');
+            } else {
+              link.classList.remove('text-brand-orange');
+              link.classList.add('text-slate-200');
+            }
+          } catch (e) { }
+        });
+        updateLanguageSwitches(forcedHash || '');
+        return;
+      }
+
+      if (forcedHash) {
+        navLinks.forEach(link => {
+          try {
+            const linkUrl = new URL(link.href);
+            if (linkUrl.hash === forcedHash) {
+              link.classList.add('text-brand-orange');
+              link.classList.remove('text-slate-200');
+            } else {
+              link.classList.remove('text-brand-orange');
+              link.classList.add('text-slate-200');
+            }
+          } catch (e) { }
+        });
+        updateLanguageSwitches(forcedHash);
+        return;
+      }
+
+      // Scroll spy to identify the current visible section
+      const sections = ['home', 'overview', 'programs', 'resources', 'pamphlets', 'contact'];
+      let activeSectionId = 'home';
+
+      for (const sectionId of sections) {
+        const el = document.getElementById(sectionId);
+        if (el) {
+          const rect = el.getBoundingClientRect();
+          if (rect.top <= 140) {
+            activeSectionId = sectionId;
+          }
+        }
+      }
+
+      navLinks.forEach(link => {
+        try {
+          const linkUrl = new URL(link.href);
+          const linkHash = linkUrl.hash || '#home';
+          if (linkHash === '#' + activeSectionId) {
+            link.classList.add('text-brand-orange');
+            link.classList.remove('text-slate-200');
+          } else {
+            link.classList.remove('text-brand-orange');
+            link.classList.add('text-slate-200');
+          }
+        } catch (e) { }
+      });
+
+      updateLanguageSwitches('#' + activeSectionId);
+    }
+
+    window.addEventListener('scroll', function () {
+      const navbar = document.getElementById('navbar-container');
+      const header = document.getElementById('main-header');
+      const alertBanner = document.getElementById('alert-banner');
+      const isHome = checkIsHome();
+      if (window.scrollY > 30) {
+        navbar.classList.add('bg-slate-950/95', 'backdrop-blur-md', 'shadow-lg');
+        navbar.classList.remove('bg-transparent');
+        header.classList.remove('py-6');
+        header.classList.add('py-4');
+        if (alertBanner) {
+          alertBanner.style.height = '0px';
+          alertBanner.style.padding = '0px';
+          alertBanner.style.opacity = '0';
+          alertBanner.style.overflow = 'hidden';
+        }
+      } else {
+        if (isHome) {
+          navbar.classList.remove('bg-slate-950/95', 'backdrop-blur-md', 'shadow-lg');
+          navbar.classList.add('bg-transparent');
+        } else {
+          navbar.classList.add('bg-slate-950/95', 'backdrop-blur-md', 'shadow-lg');
+          navbar.classList.remove('bg-transparent');
+        }
+        header.classList.add('py-6');
+        header.classList.remove('py-4');
+        if (alertBanner) {
+          alertBanner.style.height = '';
+          alertBanner.style.padding = '';
+          alertBanner.style.opacity = '1';
+        }
+      }
+
+      highlightActiveLink();
+    });
+
+    // Mobile Menu Toggle via Event Delegation
+    document.addEventListener('click', function (e) {
+      const mobileMenuBtn = e.target.closest('#mobile-menu-btn');
+      if (mobileMenuBtn) {
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (mobileMenu) {
+          mobileMenu.classList.toggle('hidden');
+        }
+      }
+    });
+
+    // SPA Router click listener
+    document.addEventListener('click', function (e) {
+      const link = e.target.closest('a');
+      if (!link) return;
+
+      const href = link.getAttribute('href');
+      // Ignore external, anchors, mailto, target blank, and files like PDFs
+      if (!href || href.startsWith('http') || href.startsWith('mailto:') || link.target === '_blank' || href.endsWith('.pdf')) {
+        return;
+      }
+
+      const targetUrl = new URL(link.href, window.location.origin);
+      const currentUrl = new URL(window.location.href);
+
+      // If it's a hash link on the same page path
+      if (targetUrl.hash && isSamePagePath(targetUrl.href, currentUrl.href)) {
+        e.preventDefault();
+
+        // Hide mobile menu if open
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+          mobileMenu.classList.add('hidden');
+        }
+
+        history.pushState(null, '', targetUrl.hash);
+        smoothScrollToHash(targetUrl.hash);
+        highlightActiveLink(targetUrl.hash);
+        return;
+      }
+
+      // If it's a non-hash link or a different page
+      e.preventDefault();
+      navigateTo(link.href);
+    });
+
+    function navigateTo(url) {
+      const parsedUrl = new URL(url, window.location.origin);
+      const targetHash = parsedUrl.hash;
+
+      // Hide mobile menu if open
+      const mobileMenu = document.getElementById('mobile-menu');
+      if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+        mobileMenu.classList.add('hidden');
+      }
+
+      const main = document.getElementById('main-content');
+      if (main) {
+        main.style.opacity = '0.3';
+        main.style.transition = 'opacity 150ms ease-out';
+      }
+
+      fetch(url)
+        .then(response => {
+          if (!response.ok) throw new Error('Network response was not ok');
+          return response.text();
+        })
+        .then(htmlText => {
+          const parser = new DOMParser();
+          const doc = parser.parseFromString(htmlText, 'text/html');
+
+          document.title = doc.title;
+          document.documentElement.lang = doc.documentElement.lang || 'en';
+
+          // Swap header/footer layout elements for translation / active states
+          const elementIds = ['alert-banner', 'main-header', 'mobile-menu', 'main-content'];
+          elementIds.forEach(id => {
+            const oldEl = document.getElementById(id);
+            const newEl = doc.getElementById(id);
+            if (oldEl && newEl) {
+              oldEl.innerHTML = newEl.innerHTML;
+              oldEl.className = newEl.className;
+            }
+          });
+
+          if (main) {
+            main.style.opacity = '1';
+          }
+
+          const oldFooter = document.querySelector('footer');
+          const newFooter = doc.querySelector('footer');
+          if (oldFooter && newFooter) {
+            oldFooter.innerHTML = newFooter.innerHTML;
+            oldFooter.className = newFooter.className;
+          }
+
+          history.pushState(null, '', url);
+          window.dispatchEvent(new Event('scroll'));
+
+          if (targetHash) {
+            setTimeout(() => {
+              smoothScrollToHash(targetHash);
+              highlightActiveLink(targetHash);
+            }, 100);
+          } else {
+            window.scrollTo(0, 0);
+            highlightActiveLink();
+          }
+        })
+        .catch(error => {
+          console.error('SPA Router Error:', error);
+          window.location.href = url; // Fallback
+        });
+    }
+
+    // Handle back/forward history buttons
+    window.addEventListener('popstate', function () {
+      fetch(window.location.href)
+        .then(r => r.text())
+        .then(htmlText => {
+          const parser = new DOMParser();
+          const doc = parser.parseFromString(htmlText, 'text/html');
+          document.title = doc.title;
+          document.documentElement.lang = doc.documentElement.lang || 'en';
+
+          const elementIds = ['alert-banner', 'main-header', 'mobile-menu', 'main-content'];
+          elementIds.forEach(id => {
+            const oldEl = document.getElementById(id);
+            const newEl = doc.getElementById(id);
+            if (oldEl && newEl) {
+              oldEl.innerHTML = newEl.innerHTML;
+              oldEl.className = newEl.className;
+            }
+          });
+
+          const oldFooter = document.querySelector('footer');
+          const newFooter = doc.querySelector('footer');
+          if (oldFooter && newFooter) {
+            oldFooter.innerHTML = newFooter.innerHTML;
+            oldFooter.className = newFooter.className;
+          }
+
+          window.dispatchEvent(new Event('scroll'));
+          highlightActiveLink();
+
+          if (window.location.hash) {
+            smoothScrollToHash(window.location.hash);
+          }
+        });
+    });
+
+    // Run once on load
+    window.dispatchEvent(new Event('scroll'));
+    highlightActiveLink();
+
+    // Initial scroll to hash if present in URL
+    if (window.location.hash) {
+      setTimeout(() => {
+        smoothScrollToHash(window.location.hash);
+      }, 150);
+    }
+  </script>
+</body>
+
+</html>
