@@ -1,0 +1,9 @@
+title: "INYC"
+tagline: "International NeuroHealth Youth Council: youth-led neurohealth literacy and bilingual early-support resources for families in the US and China"
+baseurl: "/inyc"
+markdown: kramdown
+exclude:
+  - README.md
+
+last_updated: "November 01, 2026"
+git_sha: "b625ed3"

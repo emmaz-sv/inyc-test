@@ -1,0 +1,39 @@
+{
+  "name": "inyc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "vitest run",
+    "update-meta": "node -e 'const {execSync}=require(\"child_process\"),fs=require(\"fs\");const d=execSync(\"git log -1 --format=%cd --date=format:\\\"%B %d, %Y\\\"\").toString().trim(),s=execSync(\"git rev-parse --short HEAD\").toString().trim(),p=\"docs/_config.yml\";let c=fs.readFileSync(p,\"utf8\").replace(/^last_updated:.*$/m,`last_updated: \"${d}\"`).replace(/^git_sha:.*$/m,`git_sha: \"${s}\"`);fs.writeFileSync(p,c);console.log(`Updated ${p}: ${d} (${s})`);'",
+    "build": "npm run update-meta && docker run --rm -v \"$PWD\":/srv/jekyll -w /srv/jekyll ruby:3.3 sh -c \"bundle config set path 'vendor/bundle' && bundle exec jekyll build --source docs --destination _site\"",
+    "build:local": "npm run update-meta && bundle exec jekyll build --source docs --destination _site"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emmaz-sv/inyc.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/emmaz-sv/inyc/issues"
+  },
+  "homepage": "https://github.com/emmaz-sv/inyc#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.5.0",
+    "jsdom": "^29.1.1",
+    "postcss": "^8.5.15",
+    "postcss-cli": "^11.0.1",
+    "tailwindcss": "^3.4.19",
+    "vitest": "^4.1.10"
+  },
+  "dependencies": {
+    "beautiful-mermaid": "^1.1.3",
+    "mcp-cli": "https://github.com/philschmid/mcp-cli"
+  }
+}

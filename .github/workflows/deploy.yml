@@ -1,0 +1,32 @@
+name: Build and deploy Jekyll site
+
+on:
+  push:
+    branches: [ main ]
+
+permissions:
+  contents: write
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.3'
+          bundler: 'latest'
+          bundler-cache: true
+      - name: Inject last updated time
+        run: |
+          sed -i.bak -e "s/^last_updated:.*/last_updated: \"$(git log -1 --format=%cd --date=format:'%B %d, %Y')\"/" -e "s/^git_sha:.*/git_sha: \"$(git rev-parse --short HEAD)\"/" docs/_config.yml
+          rm -f docs/_config.yml.bak
+      - name: Build site
+        run: |
+          bundle exec jekyll build --source docs --destination _site
+      - name: Deploy to gh-pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          publish_dir: ./_site
+          github_token: ${{ secrets.GITHUB_TOKEN }}
